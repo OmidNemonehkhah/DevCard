@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevCard_MVC.Models
 {
@@ -16,6 +17,7 @@ namespace DevCard_MVC.Models
         [EmailAddress(ErrorMessage ="مقدار وارد شده ایمیل صحیح نیست")]
         public string Email { get; set; }
         public string Message { get; set; }
-        public string Service { get; set; }
+        public int Service { get; set; }
+        public SelectList Services { get; set; }
     }
 }
